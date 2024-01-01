@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Set_time extends Model {
     /**

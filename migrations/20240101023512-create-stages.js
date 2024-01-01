@@ -1,17 +1,20 @@
 'use strict';
+
+const { DataTypes } = require('sequelize');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('stages', {
       stage_id: {
-        allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        autoIncrement: true,
+        allowNull: false,
+        type: DataTypes.INTEGER,
       },
       stage_name: {
-        type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        type: DataTypes.STRING
       }
     });
   },
