@@ -3,6 +3,30 @@ const express = require('express')
 const app = express()
 const { Sequelize } = require('sequelize')
 
+require('dotenv').config();
+
+// SEQUELIZE CONNECTION
+const sequelize = new Sequelize(
+    process.env.PG_URI, {
+        host: 'localhost',
+        dialect: 'postgres'
+    });
+
+async function testConnection() {
+    try {
+        await sequelize.authenticate();
+        console.log('Connection to the database has been established successfully.');
+    } catch (error) {
+        console.error('Unable to connect to the database:', error.message);
+    } finally {
+        // Close the Sequelize connection
+        await sequelize.close();
+    }
+}
+
+// Run the test connection function
+testConnection();
+
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
