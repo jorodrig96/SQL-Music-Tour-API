@@ -10,11 +10,11 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       stage_name: {
         allowNull: false,
-        type: DataTypes.STRING
+        type: Sequelize.STRING
       }
     });
   },

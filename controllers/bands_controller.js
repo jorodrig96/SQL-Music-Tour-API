@@ -2,8 +2,7 @@ const bands = require('express').Router();
 const db = require('../models');
 const { Band } = db;
 
-//FIND ALL BANDS
-
+// FIND ALL BANDS
 bands.get('/', async (req, res) => {
     try {
         const foundBands = await Band.findAll()
@@ -13,9 +12,8 @@ bands.get('/', async (req, res) => {
     }
 })
 
-
 //FIND A SPECIFIC BAND
-
+//http://localhost:5150/bands/1
 bands.get('/:id', async(req,res) => {
     try{
         const foundBand = await Band.findOne({

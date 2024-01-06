@@ -10,10 +10,10 @@ module.exports = {
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
-        type: DataTypes.INTEGER
+        type: Sequelize.INTEGER
       },
       event_id: {
-        type: DataTypes.SMALLINT,
+        type: Sequelize.SMALLINT,
         allowNull: false,
         references: {
           model: 'Event', 
@@ -21,11 +21,11 @@ module.exports = {
         }
       },
       stage_id: {
-        type: DataTypes.SMALLINT,
+        type: Sequelize.SMALLINT,
         allowNull: false
       },
       band_id: {
-        type: DataTypes.SMALLINT,
+        type: Sequelize.SMALLINT,
         allowNull: false,
         references: {
           model: 'Band', 
@@ -33,11 +33,11 @@ module.exports = {
         }
       },
       start_time: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         allowNull: false
       },
       end_time: {
-        type: DataTypes.DATE,
+        type: Sequelize.DATE,
         allowNull: false
       }
     });
