@@ -8,9 +8,7 @@ module.exports = {
     await queryInterface.createTable('meet_greets', {
       meet_greet_id: {
         primaryKey: true,
-        autoIncrement: true,
-        allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.SERIAl,
       },
       event_id: {
         type: Sequelize.SMALLINT,

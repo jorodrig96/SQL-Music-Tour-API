@@ -8,9 +8,7 @@ module.exports = {
     await queryInterface.createTable('stages', {
       stage_id: {
         primaryKey: true,
-        autoIncrement: true,
-        allowNull: false,
-        type: Sequelize.INTEGER,
+        type: Sequelize.SERIAl,
       },
       stage_name: {
         allowNull: false,

@@ -6,12 +6,11 @@ const { DataTypes } = require('sequelize');
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('set_times', {
-      set_time_id: {
-        primaryKey: true,
-        autoIncrement: true,
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
+      set_time_id:
+        {
+          primaryKey: true,
+          type: Sequelize.SERIAl,
+        },
       event_id: {
         type: Sequelize.SMALLINT,
         allowNull: false,
