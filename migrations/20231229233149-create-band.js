@@ -1,24 +1,26 @@
+const { DataTypes } = require("sequelize")
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('bands', {
         band_id: {
           primaryKey: true,
-          type: Sequelize.SERIAl,
+          type: DataTypes.SERIAl,
         },
       name: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       genre: {
-        type: Sequelize.TEXT,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
       available_start_time: {
-        type: Sequelize.DATE,
+        type: DataTypes.DATE,
         allowNull: false,
       },
       end_time: {
-        type: Sequelize.DATE,
+        type: DataTypes.DATE,
         allowNull: false,
       }
     })

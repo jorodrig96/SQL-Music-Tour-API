@@ -21,7 +21,8 @@ module.exports = {
       },
       stage_id: {
         type: Sequelize.SMALLINT,
-        allowNull: false
+        allowNull: false,
+        
       },
       band_id: {
         type: Sequelize.SMALLINT,
